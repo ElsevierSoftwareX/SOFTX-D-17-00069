@@ -1,0 +1,30 @@
+set terminal eps enhanced
+#set terminal png size 10.5,800
+set out "graph_scatter__PSNRvar_vs_PSNR_interpolated.eps"
+set datafile separator ','
+set xlabel "PSNR_G-PSNR_A"
+set ylabel "{/Symbol s}^2_{PSNR}"
+set grid
+set format x "%.1f"
+#set key right bottom
+set key left top
+plot [0:] [0:45] \
+"< grep 'src01' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv" u ($6-$7):($9)**2 t "" w p pt 7 ps 0.1,\
+"< grep 'src01' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv | python script_linear_interpolation.py stdin" u 1:2 t "src01" w l lt 1 lw 2,\
+"< grep 'src02' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv" u ($6-$7):($9)**2 t "" w p pt 7 ps 0.1,\
+"< grep 'src02' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv | python script_linear_interpolation.py stdin" u 1:2 t "src02" w l lt 2 lw 2,\
+"< grep 'src03' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv" u ($6-$7):($9)**2 t "" w p pt 7 ps 0.1,\
+"< grep 'src03' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv | python script_linear_interpolation.py stdin" u 1:2 t "src03" w l lt 3 lw 2,\
+"< grep 'src04' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv" u ($6-$7):($9)**2 t "" w p pt 7 ps 0.1,\
+"< grep 'src04' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv | python script_linear_interpolation.py stdin" u 1:2 t "src04" w l lt 4 lw 2,\
+"< grep 'src05' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv" u ($6-$7):($9)**2 t "" w p pt 7 ps 0.1,\
+"< grep 'src05' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv | python script_linear_interpolation.py stdin" u 1:2 t "src05" w l lt 5 lw 2,\
+"< grep 'src06' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv" u ($6-$7):($9)**2 t "" w p pt 7 ps 0.1,\
+"< grep 'src06' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv | python script_linear_interpolation.py stdin" u 1:2 t "src06" w l lt 6 lw 2,\
+"< grep 'src07' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv" u ($6-$7):($9)**2 t "" w p pt 7 ps 0.1,\
+"< grep 'src07' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv | python script_linear_interpolation.py stdin" u 1:2 t "src07" w l lt 7 lw 2,\
+"< grep 'src08' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv" u ($6-$7):($9)**2 t "" w p pt 7 ps 0.1,\
+"< grep 'src08' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv | python script_linear_interpolation.py stdin" u 1:2 t "src08" w l lt 8 lw 2,\
+"< grep 'src10' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv" u ($6-$7):($9)**2 t "" w p pt 7 ps 0.1,\
+"< grep 'src10' data_psnr000_vs_psnrA00_with_overall_mean_variance.csv | python script_linear_interpolation.py stdin" u 1:2 t "src10" w l lt 9 lw 2
+
