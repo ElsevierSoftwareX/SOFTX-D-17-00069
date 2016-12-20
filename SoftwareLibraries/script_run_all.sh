@@ -10,10 +10,10 @@
 # ReproducibleQualityResearch is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
+# GNU Lesser General Public License (LGPL) for more details.
 # 
-# You should have received a copy of the GNU General Public License
-# along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+# You should have received a copy of the GNU Lesser General Public License (LGPL)
+# along with ReproducibleQualityResearch.  If not, see <http://www.gnu.org/licenses/>.
 # 
 # Author of this file: Enrico Masala  <masala _at polito it>
 # Dec 15, 2016
