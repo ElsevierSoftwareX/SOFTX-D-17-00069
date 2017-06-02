@@ -32,3 +32,6 @@ To learn more about this framework, visit [VQEG JEG-Hybrids Reproducible Framewo
 
 The "Reproducible Video Quality Research Framework" is based on python scripts and does not require installation except from cloning the repository.
 
+### Running the framework
+
+For an extensive step by step guide, please visit [VQEG JEG-Hybrids Reproducible Framework](http://vqegjeg.intec.ugent.be/wiki/index.php/JEG_Reproducible_Video_Quality_Analysis_Framework)
